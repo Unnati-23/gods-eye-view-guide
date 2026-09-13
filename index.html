@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>God's Eye View — Install Guide | aiwithunnati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Zilla+Slab:wght@600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#FBF0D8;
+    --cream-card:#FCF4E2;
+    --cream-2:#F1E4C4;
+    --red:#D93A2B;
+    --red-dark:#C22C1E;
+    --ink:#1C1B19;
+    --ink-soft:#55524C;
+    --sage:#8E9B6C;
+    --sage-deep:#6F7C4E;
+    --sage-box:#E7E9D5;
+    --peach-box:#F6E8CE;
+    --maxw:900px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:18px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;}
+  a{color:inherit;}
+
+  /* ---------- shared layout ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .band{padding:64px 0;}
+  .band-cream{background:var(--cream);}
+  .band-red{background:var(--red);color:var(--cream);}
+
+  /* ---------- header ---------- */
+  header{background:var(--cream);border-bottom:1px solid rgba(28,27,25,.10);}
+  .header-inner{max-width:var(--maxw);margin:0 auto;padding:26px 24px 20px;text-align:center;}
+  .wordmark{
+    font-family:'Zilla Slab',serif;
+    font-weight:700;
+    color:var(--red);
+    font-size:30px;
+    letter-spacing:.5px;
+    text-transform:none;
+    text-decoration:none;
+    display:inline-block;
+    margin-bottom:16px;
+  }
+  nav{display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  nav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  nav a.active{color:var(--ink);}
+  nav a:hover{color:var(--red);}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--red);color:var(--cream);padding:52px 0 60px;}
+  .byline{
+    color:rgba(251,240,216,.72);
+    font-size:16px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px 14px;
+    margin-bottom:22px;
+  }
+  .byline strong{color:var(--cream);font-weight:600;}
+  .social-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(0,0,0,.16);
+    color:var(--cream);
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:8px 14px;
+    border-radius:6px;
+  }
+  .social-btn:hover{background:rgba(0,0,0,.28);}
+  .social-btn .ic{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:18px;height:18px;background:rgba(0,0,0,.22);border-radius:4px;font-size:11px;
+  }
+  .tag{
+    display:inline-block;
+    background:var(--cream);
+    color:var(--red);
+    font-family:'Anton',sans-serif;
+    font-size:14px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:8px 15px 6px;
+    border-radius:4px;
+    margin-bottom:22px;
+  }
+  h1{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    color:var(--cream);
+    font-size:clamp(48px,10vw,86px);
+    line-height:.94;
+    letter-spacing:.01em;
+    margin:0 0 26px;
+  }
+  .hero p{
+    font-size:clamp(19px,2.4vw,23px);
+    line-height:1.55;
+    color:rgba(251,240,216,.95);
+    max-width:760px;
+    margin:0;
+  }
+
+  /* ---------- source box ---------- */
+  .source-box{
+    background:var(--peach-box);
+    border-left:5px solid var(--red);
+    padding:22px 26px;
+    margin:-30px 0 8px;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .source-box a{color:var(--red);text-decoration:underline;text-underline-offset:3px;}
+
+  /* ---------- content section ---------- */
+  .kicker{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-size:15px;
+    margin:0 0 14px;
+  }
+  .kicker-red{color:var(--red);}
+  .kicker-sage{color:var(--sage-deep);}
+  h2{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:clamp(30px,5.4vw,44px);
+    line-height:1.02;
+    letter-spacing:.01em;
+    margin:0 0 20px;
+  }
+  h3{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+    font-size:24px;
+    margin:38px 0 14px;
+  }
+  .lead{font-size:20px;}
+  p{margin:0 0 18px;}
+  .muted{color:var(--ink-soft);}
+
+  /* sage note box */
+  .note-box{
+    background:var(--sage-box);
+    border-left:5px solid var(--sage);
+    padding:24px 28px;
+    margin:0 0 40px;
+    border-radius:2px;
+  }
+  .note-box .kicker{margin-bottom:10px;}
+  .note-box p:last-child{margin-bottom:0;}
+
+  /* prerequisite list */
+  ul.clean{list-style:none;padding:0;margin:0 0 28px;}
+  ul.clean li{
+    position:relative;padding:10px 0 10px 30px;
+    border-bottom:1px solid rgba(28,27,25,.08);
+    font-size:17px;
+  }
+  ul.clean li:before{
+    content:"→";position:absolute;left:0;top:10px;color:var(--red);font-weight:700;
+  }
+  ul.clean li b{font-weight:700;}
+
+  /* step */
+  .step{margin:0 0 30px;}
+  .step-head{display:flex;align-items:center;gap:14px;margin:0 0 12px;}
+  .step-num{
+    flex:none;width:38px;height:38px;border-radius:50%;
+    background:var(--red);color:var(--cream);
+    font-family:'Anton',sans-serif;font-size:19px;
+    display:flex;align-items:center;justify-content:center;padding-top:2px;
+  }
+  .step-title{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.02em;}
+
+  /* code block */
+  .code{
+    position:relative;
+    background:#1C1B19;
+    color:#FBF0D8;
+    border-radius:10px;
+    padding:46px 20px 18px;
+    margin:0 0 20px;
+    font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:14.5px;
+    line-height:1.8;
+    overflow-x:auto;
+    white-space:pre;
+    border:1px solid rgba(0,0,0,.25);
+  }
+  .code .cm{color:#8E9B6C;} /* comment */
+  .code .cmd{color:#FBF0D8;}
+  .copy-btn{
+    position:absolute;top:12px;right:12px;
+    background:var(--red);color:var(--cream);border:none;
+    font-family:'Anton',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    padding:6px 12px;border-radius:5px;cursor:pointer;
+  }
+  .copy-btn:hover{background:var(--red-dark);}
+  .code-label{
+    font-family:'Anton',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);margin:0 0 8px;
+  }
+
+  /* editor grid */
+  .editors{display:grid;grid-template-columns:1fr;gap:16px;margin:0 0 20px;}
+  @media(min-width:620px){.editors{grid-template-columns:1fr 1fr;}}
+  .editor-card{
+    background:var(--cream-card);
+    border:1px solid rgba(28,27,25,.12);
+    border-radius:10px;
+    padding:18px 20px;
+  }
+  .editor-card h4{
+    font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;
+    font-size:19px;margin:0 0 10px;
+  }
+  .editor-card code{
+    display:block;background:#1C1B19;color:#FBF0D8;border-radius:7px;
+    padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.6;
+    overflow-x:auto;white-space:pre;
+  }
+  .editor-card p{font-size:15px;margin:10px 0 0;color:var(--ink-soft);}
+
+  .open-url{
+    display:inline-block;background:var(--red);color:var(--cream);
+    text-decoration:none;font-family:'Anton',sans-serif;letter-spacing:.06em;text-transform:uppercase;
+    padding:12px 22px;border-radius:6px;font-size:16px;margin:6px 0 8px;
+  }
+  .open-url:hover{background:var(--red-dark);}
+
+  /* ---------- CTA cards ---------- */
+  .cta-card{
+    background:var(--cream-card);
+    padding:40px 34px;
+    margin:0 0 26px;
+    border-radius:2px;
+  }
+  .cta-card:last-child{margin-bottom:0;}
+  .cta-card h2{margin-bottom:16px;color:var(--ink);}
+  .cta-card p{color:var(--ink-soft);font-size:19px;margin-bottom:26px;}
+  .btn{
+    display:inline-block;
+    background:var(--red);
+    color:var(--cream);
+    text-decoration:none;
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-size:19px;
+    padding:18px 30px;
+    border-radius:3px;
+  }
+  .btn:hover{background:var(--red-dark);}
+  .btn-block{display:block;text-align:center;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--cream);padding:48px 0 42px;border-top:1px solid rgba(28,27,25,.10);text-align:center;}
+  .foot-word{font-family:'Zilla Slab',serif;font-weight:700;color:var(--red);font-size:24px;text-transform:none;letter-spacing:.3px;margin:0 0 6px;}
+  .foot-role{color:var(--ink);font-weight:600;margin:0 0 18px;}
+  .foot-socials{display:flex;justify-content:center;gap:14px;margin:0 0 22px;flex-wrap:wrap;}
+  .foot-socials a{
+    text-decoration:none;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    border:1px solid var(--red);border-radius:6px;padding:8px 16px;
+  }
+  .foot-socials a:hover{background:var(--red);color:var(--cream);}
+  .copyright{color:var(--ink-soft);font-size:15px;margin:0;}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <a href="https://aiwithunnati.com" class="wordmark">aiwithunnati</a>
+    <nav>
+      <a href="https://aiwithunnati.com">Home</a>
+      <a href="https://aiwithunnati.com/free-guides" class="active">Free Guides</a>
+      <a href="https://aiwithunnati.com">Build with AI ▾</a>
+      <a href="mailto:hello@aiwithunnati.com">Contact Me</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="byline">
+      <span>A free guide by&nbsp; <strong>Unnati Tripathi</strong> · CEO &amp; Co-Founder, Maester Labs</span>
+      <a class="social-btn" href="https://instagram.com/aiwithunnati" target="_blank" rel="noopener"><span class="ic">↗</span> Instagram</a>
+    </div>
+
+    <span class="tag">Open Source</span>
+
+    <h1>Put a Spy Satellite<br />in Your Browser</h1>
+
+    <p>God's Eye View is a spy-satellite simulator that runs in your browser — except the data is real. Live open-source spatial intelligence on a photorealistic 3D globe: satellites, flights, vessels, wildfires and rocket launches. It's free, fully open source, and boots with <strong>zero API keys</strong>. Here's how to get it running on your own machine in about five minutes.</p>
+  </div>
+</section>
+
+<!-- ===== SOURCE + INSTALL ===== -->
+<section class="band band-cream" style="padding-top:56px;">
+  <div class="wrap">
+    <div class="source-box">
+      Source: <a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener">Get God's Eye View on GitHub →</a><br />
+      <span style="font-weight:500;font-size:15px;color:var(--ink-soft);">https://github.com/bilawalsidhu/gods-eye-view</span>
+    </div>
+
+    <div style="height:34px;"></div>
+
+    <p class="kicker kicker-sage">The 5-Minute Setup</p>
+    <h2>Run It on Your Machine</h2>
+
+    <div class="note-box">
+      <p class="kicker kicker-sage">No keys needed</p>
+      <p style="margin:0;">The app starts fully keyless on a free satellite basemap (Esri World Imagery). API keys are <em>upgrades, not prerequisites</em> — you can add them later to unlock live flights, ships, wildfires and voice. Start first, power up when you want.</p>
+    </div>
+
+    <h3>Before you start</h3>
+    <ul class="clean">
+      <li><b>Node.js 24.x</b> (24.14.0 or later) or <b>26.x</b>. Avoid Node 25 — it's end-of-life.</li>
+      <li><b>Git</b> — to clone the repository.</li>
+      <li>Any terminal (macOS Terminal, iTerm, Windows PowerShell, or the built-in terminal inside your editor).</li>
+    </ul>
+
+    <h3>Install it — copy &amp; paste</h3>
+
+    <div class="step">
+      <div class="step-head"><div class="step-num">1</div><div class="step-title">Clone &amp; boot</div></div>
+      <p class="code-label">Run these in order</p>
+      <div class="code"><button class="copy-btn" data-copy="git clone https://github.com/bilawalsidhu/gods-eye-view.git
+cd gods-eye-view
+npm ci
+npm run doctor
+npm run dev">Copy</button><span class="cm"># clone the repo and enter the folder
+</span><span class="cmd">git clone https://github.com/bilawalsidhu/gods-eye-view.git
+cd gods-eye-view
+
+</span><span class="cm"># install exactly what's pinned, then run the setup check
+</span><span class="cmd">npm ci
+npm run doctor
+
+</span><span class="cm"># start it
+</span><span class="cmd">npm run dev</span></div>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><div class="step-num">2</div><div class="step-title">Open it</div></div>
+      <p>When the server says <b>ready</b>, open this in your browser:</p>
+      <a class="open-url" href="http://localhost:4173" target="_blank" rel="noopener">http://localhost:4173 →</a>
+      <p class="muted">Pick a starting mode — Live Contacts, Space Missions, Environmental, or Explore Manually — and start spinning the globe.</p>
+    </div>
+
+    <h3>Open it in your editor or AI agent</h3>
+    <p class="muted" style="margin-bottom:22px;">Prefer to work on it in Claude Code, Cursor, Codex, or VS Code? Clone it first (Step 1), then open the folder in whichever tool you use and run <b>npm run dev</b> from its built-in terminal.</p>
+
+    <div class="editors">
+      <div class="editor-card">
+        <h4>Claude Code</h4>
+        <code>cd gods-eye-view
+claude</code>
+        <p>Starts Claude Code inside the repo. Then run <b>npm run dev</b>.</p>
+      </div>
+      <div class="editor-card">
+        <h4>Cursor</h4>
+        <code>cd gods-eye-view
+cursor .</code>
+        <p>Or open the folder from Cursor's UI, then run <b>npm run dev</b> in its terminal.</p>
+      </div>
+      <div class="editor-card">
+        <h4>OpenAI Codex CLI</h4>
+        <code>cd gods-eye-view
+codex</code>
+        <p>Launches the Codex agent in the project. Then run <b>npm run dev</b>.</p>
+      </div>
+      <div class="editor-card">
+        <h4>VS Code</h4>
+        <code>cd gods-eye-view
+code .</code>
+        <p>Opens the project, then run <b>npm run dev</b> in the integrated terminal.</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <p class="kicker kicker-sage">macOS tip</p>
+      <p style="margin:0;">On a Mac, <b>./scripts/dev-fresh.sh</b> clears the Vite cache and pulls any keys from your Keychain — handy if a restart ever looks stale.</p>
+    </div>
+
+    <h3>Optional power-ups</h3>
+    <p class="muted">Everything below is optional. Add keys in-app via the <b>POWER UP</b> chip (bottom-right) → <b>Provider Settings</b>:</p>
+    <ul class="clean">
+      <li><b>OpenSky</b> — real live flight tracking</li>
+      <li><b>AISStream</b> — live ship &amp; vessel positions</li>
+      <li><b>NASA FIRMS</b> — active wildfire detections</li>
+      <li><b>OpenAI</b> — voice control (talk to the map)</li>
+      <li><b>Cesium ion / Google Maps</b> — higher-res 3D terrain &amp; imagery</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <p class="foot-word">aiwithunnati</p>
+    <p class="foot-role">Unnati Tripathi · CEO &amp; Co-Founder, Maester Labs</p>
+    <div class="foot-socials">
+      <a href="https://instagram.com/aiwithunnati" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <p class="copyright">© 2026 Unnati Tripathi. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy') || '';
+      navigator.clipboard.writeText(text).then(function(){
+        var old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function(){ btn.textContent = old; }, 1500);
+      }).catch(function(){
+        btn.textContent = 'Copy failed';
+        setTimeout(function(){ btn.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
+</script>
+</body>
+</html>
